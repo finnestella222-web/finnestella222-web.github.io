@@ -21,16 +21,17 @@
 
     #ascii-bg {
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
+      top: -5%;
+      left: -5%;
+      width: 110vw;
+      height: 110vh;
       z-index: 0;
       pointer-events: none;
       overflow: hidden;
       opacity: 0;
       animation: bgFade 3s ease forwards;
       animation-delay: 0.5s;
+      will-change: transform;
     }
 
     @keyframes bgFade {
@@ -44,15 +45,19 @@
       white-space: pre;
       user-select: none;
       line-height: 1.1;
-      font-size: 0.42vw;
-      letter-spacing: 0.03em;
+      letter-spacing: 0.01em;
       position: absolute;
       top: 0;
       left: 0;
+      /* This is the key — scale font to fill full width */
+      font-size: calc(100vw / 100);
       width: 100%;
+      min-height: 100%;
     }
 
     #page {
+      position: relative;
+      z-index: 10;
       opacity: 0;
       animation: fadeIn 1.2s ease forwards;
       animation-delay: 0.2s;
@@ -64,8 +69,6 @@
     }
 
     nav {
-      position: relative;
-      z-index: 10;
       padding: 28px 40px;
       display: flex;
       justify-content: space-between;
@@ -98,8 +101,6 @@
     }
 
     #hero {
-      position: relative;
-      z-index: 1;
       padding: 12vh 40px 0;
     }
 
@@ -133,8 +134,6 @@
     }
 
     .container {
-      position: relative;
-      z-index: 1;
       padding: 80px 40px 60px;
     }
 
@@ -164,8 +163,6 @@
     }
 
     footer {
-      position: relative;
-      z-index: 1;
       padding: 20px 40px;
       font-size: 12px;
       color: #333;
@@ -289,6 +286,25 @@
     <footer>Made by Finn</footer>
   </div>
 
+  <script>
+    const bg = document.getElementById('ascii-bg');
+    let mouseX = 0, mouseY = 0;
+    let currentX = 0, currentY = 0;
+
+    document.addEventListener('mousemove', e => {
+      mouseX = (e.clientX / window.innerWidth - 0.5) * 18;
+      mouseY = (e.clientY / window.innerHeight - 0.5) * 18;
+    });
+
+    function animate() {
+      currentX += (mouseX - currentX) * 0.04;
+      currentY += (mouseY - currentY) * 0.04;
+      bg.style.transform = `translate(${currentX}px, ${currentY}px)`;
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+  </script>
+
 </body>
-</html>
 </html>
