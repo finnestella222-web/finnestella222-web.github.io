@@ -1,144 +1,239 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Finn's Resume</title>
+  <title>Finn Estella — Resume</title>
 
   <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
       font-family: Arial, sans-serif;
-      background-color: #0b1c2c;
+      background-color: #0a0a0a;
       color: white;
-      margin: 0;
-      padding: 0;
+      min-height: 100vh;
+    }
+
+    #page {
+      opacity: 0;
+      animation: fadeIn 1.2s ease forwards;
+      animation-delay: 0.2s;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
     }
 
     nav {
-      background-color: #0d2a42;
-      padding: 12px;
-      text-align: center;
+      padding: 28px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
-    nav a {
-      color: #4fc3f7;
+    nav .nav-name {
+      font-size: 13px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #888;
       text-decoration: none;
-      margin: 0 20px;
-      font-size: 16px;
     }
 
-    nav a:hover {
-      color: #81d4fa;
+    nav .nav-links {
+      display: flex;
+      gap: 24px;
     }
 
-    header {
-      background-color: #123a5c;
-      padding: 30px;
-      text-align: center;
+    nav .nav-links a {
+      color: #666;
+      text-decoration: none;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: color 0.2s;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 36px;
-    }
-
-    header p {
-      color: #cfd8dc;
-      margin: 6px 0 0;
-    }
+    nav .nav-links a:hover { color: white; }
 
     .container {
-      padding: 40px;
-      max-width: 900px;
-      margin: auto;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 60px 40px 100px;
+    }
+
+    .page-title {
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #444;
+      margin-bottom: 60px;
     }
 
     h2 {
-      border-bottom: 2px solid #4fc3f7;
-      padding-bottom: 5px;
-      margin-top: 40px;
-      color: #4fc3f7;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #444;
+      margin-top: 52px;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #1a1a1a;
     }
 
     h3 {
-      margin: 20px 0 4px;
-      font-size: 18px;
+      font-size: 16px;
       color: white;
+      font-weight: 600;
+      margin-bottom: 4px;
     }
 
     .meta {
-      color: #90caf9;
-      font-size: 14px;
-      margin: 0 0 8px;
+      font-size: 12px;
+      color: #555;
+      margin-bottom: 12px;
+      letter-spacing: 0.04em;
     }
 
     p, li {
-      color: #cfd8dc;
-      line-height: 1.7;
+      font-size: 14px;
+      color: #888;
+      line-height: 1.8;
     }
 
     ul {
-      margin: 6px 0 0 16px;
-      padding: 0;
+      margin-left: 16px;
+    }
+
+    .entry {
+      margin-bottom: 32px;
     }
 
     .tag-list {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
-      padding: 0;
+      gap: 8px;
       list-style: none;
-      margin: 12px 0 0;
+      margin: 0;
+      padding: 0;
     }
 
     .tag-list li {
-      background-color: #1a3a5c;
-      border: 1px solid #4fc3f7;
-      border-radius: 20px;
-      padding: 4px 14px;
-      font-size: 14px;
-      color: #e0f7fa;
+      font-size: 12px;
+      color: #666;
+      border: 1px solid #222;
+      border-radius: 3px;
+      padding: 4px 12px;
+      letter-spacing: 0.05em;
     }
 
     footer {
-      margin-top: 60px;
-      padding: 20px;
-      background-color: #123a5c;
-      text-align: center;
-      font-size: 14px;
-      color: #aaa;
+      padding: 20px 40px;
+      font-size: 12px;
+      color: #333;
+      letter-spacing: 0.08em;
+      max-width: 860px;
+      margin: 0 auto;
     }
   </style>
 </head>
-
 <body>
+<div id="page">
 
   <nav>
-    <a href="index.html">🏠 Home</a>
-    <a href="resume.html">📄 Resume</a>
-    <a href="projects.html">💻 Projects</a>
-    <a href="flows.html">🌊 Flows</a>
+    <a class="nav-name" href="index.html">Finn Estella</a>
+    <div class="nav-links">
+      <a href="resume.html">Resume</a>
+      <a href="projects.html">Projects</a>
+      <a href="flows.html">Flows</a>
+      <a href="recs.html">Recs</a>
+    </div>
   </nav>
-
-  <header>
-    <h1>📄 Finn Estella</h1>
-    <p>Atlanta, GA &nbsp;•&nbsp; 770-687-7663 &nbsp;•&nbsp; finnestella222@gmail.com</p>
-    <p><a href="https://www.linkedin.com/in/finnestella" style="color:#4fc3f7;">linkedin.com/in/finnestella</a></p>
-  </header>
 
   <div class="container">
 
-    <!-- EDUCATION -->
-    <h2>Education</h2>
-    <h3>Georgia State University — Atlanta, GA</h3>
-    <p class="meta">Bachelor of Science, Data Science &nbsp;•&nbsp; August 2023 – May 2027</p>
-    <ul>
-      <li>Relevant Coursework: Data Structures & Algorithms, Data Visualization, Software Engineering, Statistics & Probability, Python Programming</li>
-      <li>Dean's List | HOPE Scholarship Recipient</li>
-      <li>Member, National Data Science Core (NDSC)</li>
-    </ul>
+    <p class="page-title">Resume</p>
 
-    <!-- SKILLS -->
+    <h2>Education</h2>
+    <div class="entry">
+      <h3>Georgia State University</h3>
+      <p class="meta">Bachelor of Science, Data Science &nbsp;·&nbsp; August 2023 – May 2027 &nbsp;·&nbsp; GPA 3.2</p>
+      <ul>
+        <li>Relevant Coursework: Data Structures & Algorithms, Data Visualization, Software Engineering, Statistics & Probability, Python Programming</li>
+        <li>Dean's List &nbsp;·&nbsp; HOPE Scholarship Recipient</li>
+        <li>Member, National Data Science Core (NDSC)</li>
+      </ul>
+    </div>
+
+    <h2>Work Experience</h2>
+
+    <div class="entry">
+      <h3>Data Analytics Intern — AlphaAdvisors LLC</h3>
+      <p class="meta">May 2025 – January 2026 &nbsp;·&nbsp; Atlanta, GA</p>
+      <ul>
+        <li>Built reporting infrastructure for university student retention platform — took raw attrition data across programs and schools, identified dropout patterns, and wrote data narrative that helped administrators understand why students were leaving.</li>
+        <li>Evaluated automation tools for client implementation — assessed n8n and Savant Labs against competing platforms, focusing on real business workflows vs. feature comparisons.</li>
+        <li>Contributed to data governance framework for global software client — translated business requirements into technical specifications, documented data flows.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <h3>Private Lacrosse Instructor — STXZ Lacrosse</h3>
+      <p class="meta">September 2025 – Present &nbsp;·&nbsp; Atlanta, GA</p>
+      <ul>
+        <li>Organized weekly private coaching sessions for 15+ clients ages 6–15, developing individualized training programs focused on skill advancement and player development.</li>
+        <li>Selected as a coach based on competitive playing background, including 2023 All-State honors in Georgia.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <h3>Junior Correspondent / Onscreen Personality — Omni Hotels & Resorts</h3>
+      <p class="meta">October 2022 – May 2023 &nbsp;·&nbsp; Atlanta, GA</p>
+      <ul>
+        <li>Selected as primary on-camera talent for digital marketing and Peach Bowl coverage.</li>
+        <li>Conducted live interviews with athletes and executives — built instant rapport in high pressure environments, adapted messaging in real-time.</li>
+      </ul>
+    </div>
+
+    <h2>Projects</h2>
+
+    <div class="entry">
+      <h3>Facebook Marketplace Arbitrage & Pricing Intelligence Tool</h3>
+      <p class="meta">May 2025 – Present</p>
+      <ul>
+        <li>Developed an end-to-end automated pipeline using n8n to scrape and compare real-time Facebook Marketplace listings against market resale KPIs, cleaning and structuring raw data to detect pricing anomalies and generate data-driven lowball thresholds.</li>
+        <li>Engineered full cross-referencing and alerting workflow, eliminating manual research and delivering actionable pricing insights in real time.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <h3>Personal Portfolio Website</h3>
+      <p class="meta">Spring 2026</p>
+      <ul>
+        <li>Developed a personal portfolio in HTML showcasing projects including an NHL prediction model and Facebook Marketplace arbitrage tool, with downloadable n8n workflow automations.</li>
+        <li><a href="https://finnestella222-web.github.io" style="color:#555; text-decoration:none;">finnestella222-web.github.io</a></li>
+      </ul>
+    </div>
+
+    <h2>Leadership & Involvement</h2>
+
+    <div class="entry">
+      <h3>Head Coach — Howard Lacrosse</h3>
+      <p class="meta">January 2024 – Present &nbsp;·&nbsp; Atlanta, GA</p>
+      <ul>
+        <li>Led day-to-day logistics including scheduling, equipment, and practice planning while providing direct coaching on fundamentals and game strategy.</li>
+        <li>Grew program from 10 to 40 active players through hands-on player development and community outreach.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <h3>Fundraising Chair — Pi Kappa Alpha Fraternity, Epsilon Nu Chapter</h3>
+      <p class="meta">January 2024 – Present &nbsp;·&nbsp; Atlanta, GA</p>
+      <ul>
+        <li>Coordinated and executed chapter fundraising events, growing contributions through organized event planning and volunteer management.</li>
+      </ul>
+    </div>
+
     <h2>Skills</h2>
-    <p class="meta">Programming & Development</p>
     <ul class="tag-list">
       <li>Python</li>
       <li>R</li>
@@ -148,77 +243,22 @@
       <li>n8n</li>
       <li>Excel</li>
       <li>Savant Labs</li>
+      <li>Microsoft Office Suite</li>
+      <li>Business Intelligence</li>
+      <li>Data Visualization</li>
+      <li>Public Speaking</li>
     </ul>
-    <br>
-    <p class="meta">Certifications</p>
+
+    <h2>Certifications</h2>
     <ul class="tag-list">
       <li>Microsoft Power Platform</li>
       <li>Georgia State Data Skills</li>
-    </ul>
-
-    <!-- WORK EXPERIENCE -->
-    <h2>Work Experience</h2>
-
-    <h3>Data Analytics Intern — AlphaAdvisors LLC</h3>
-    <p class="meta">May 2025 – January 2026 &nbsp;•&nbsp; Atlanta, GA</p>
-    <ul>
-      <li>Built reporting infrastructure for university student retention platform — took raw attrition data across programs and schools, identified dropout patterns, and wrote data narrative that helped administrators understand why students were leaving.</li>
-      <li>Evaluated automation tools for client implementation — assessed n8n and Savant Labs against competing platforms, focusing on real business workflows vs. feature comparisons.</li>
-      <li>Contributed to data governance framework for global software client — translated business requirements into technical specifications, documented data flows.</li>
-    </ul>
-
-    <h3>Private Lacrosse Instructor — STXZ Lacrosse</h3>
-    <p class="meta">September 2025 – Present &nbsp;•&nbsp; Atlanta, GA</p>
-    <ul>
-      <li>Organized weekly private coaching sessions for 15+ clients ages 6–15, developing individualized training programs focused on skill advancement and player development.</li>
-      <li>Selected as a coach based on competitive playing background, including 2023 All-State honors in Georgia.</li>
-    </ul>
-
-    <h3>Junior Correspondent / Onscreen Personality — Omni Hotels & Resorts</h3>
-    <p class="meta">October 2022 – May 2023 &nbsp;•&nbsp; Atlanta, GA</p>
-    <ul>
-      <li>Selected as primary on-camera talent for digital marketing and Peach Bowl coverage.</li>
-      <li>Conducted live interviews with athletes and executives — built instant rapport in high pressure environments, adapted messaging in real-time.</li>
-    </ul>
-
-    <!-- PROJECTS -->
-    <h2>Projects</h2>
-
-    <h3>Facebook Marketplace Arbitrage & Pricing Intelligence Tool</h3>
-    <p class="meta">May 2025 – Present</p>
-    <ul>
-      <li>Developed an end-to-end automated pipeline using n8n to scrape and compare real-time Facebook Marketplace listings against market resale KPIs, cleaning and structuring raw data to detect pricing anomalies and generate data-driven lowball thresholds.</li>
-      <li>Engineered full cross-referencing and alerting workflow using the n8n platform, eliminating manual research and delivering actionable pricing insights in real time.</li>
-    </ul>
-
-    <h3>Personal Portfolio Website</h3>
-    <p class="meta">Spring 2026</p>
-    <ul>
-      <li>Developed a personal portfolio in HTML showcasing projects including an NHL prediction model and Facebook Marketplace arbitrage tool, with downloadable n8n workflow automations available for the pricing intelligence pipeline.</li>
-      <li><a href="https://finnestella222-web.github.io/resume.html" style="color:#4fc3f7;">finnestella222-web.github.io/resume.html</a></li>
-    </ul>
-
-    <!-- LEADERSHIP -->
-    <h2>Leadership & Involvement</h2>
-
-    <h3>Head Coach — Howard Lacrosse</h3>
-    <p class="meta">January 2024 – Present &nbsp;•&nbsp; Atlanta, GA</p>
-    <ul>
-      <li>Led day-to-day logistics including scheduling, equipment, and practice planning while providing direct player-to-player coaching on fundamentals and game strategy.</li>
-      <li>Grew program from 10 to 40 active players through hands-on player development and community outreach.</li>
-    </ul>
-
-    <h3>Fundraising Chair — Pi Kappa Alpha Fraternity, Epsilon Nu Chapter</h3>
-    <p class="meta">January 2024 – Present &nbsp;•&nbsp; Atlanta, GA</p>
-    <ul>
-      <li>Coordinated and executed chapter fundraising events, growing contributions through organized event planning and volunteer management.</li>
+      <li>CPR, First Aid & Lifeguarding</li>
     </ul>
 
   </div>
 
-  <footer>
-    <p>Made by Finn</p>
-  </footer>
-
+  <footer>Made by Finn</footer>
+</div>
 </body>
 </html>
