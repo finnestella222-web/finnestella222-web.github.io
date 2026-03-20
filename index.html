@@ -1,95 +1,88 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Finn's Resume</title>
+  <title>Finn's Website</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
       font-family: Arial, sans-serif;
       background-color: #0b1c2c;
       color: white;
-      margin: 0;
-      padding: 0;
+      text-align: center;
     }
 
     header {
       background-color: #123a5c;
-      padding: 30px;
-      text-align: center;
+      padding: 40px 30px 0;
+      position: relative;
+      overflow: hidden;
     }
 
     header h1 {
-      margin: 0;
-      font-size: 36px;
+      font-size: 40px;
+      margin-bottom: 8px;
     }
 
-    header p {
+    header p.tagline {
       color: #cfd8dc;
-      margin: 6px 0 0;
+      margin-bottom: 4px;
+    }
+
+    header p.linkedin {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    header p.linkedin a {
+      color: #4fc3f7;
+      text-decoration: none;
+    }
+
+    header p.linkedin a:hover {
+      color: #81d4fa;
+    }
+
+    .wave-container {
+      line-height: 0;
+    }
+
+    .wave-container svg {
+      display: block;
+      width: 100%;
     }
 
     .container {
-      padding: 40px;
-      max-width: 900px;
-      margin: auto;
+      padding: 50px 40px;
     }
 
     h2 {
-      border-bottom: 2px solid #4fc3f7;
-      padding-bottom: 5px;
-      margin-top: 40px;
-      color: #4fc3f7;
-    }
-
-    h3 {
-      margin: 20px 0 4px;
-      font-size: 18px;
-      color: white;
-    }
-
-    .meta {
-      color: #90caf9;
-      font-size: 14px;
-      margin: 0 0 8px;
-    }
-
-    p, li {
+      margin-bottom: 20px;
+      font-size: 22px;
       color: #cfd8dc;
-      line-height: 1.7;
     }
 
-    ul {
-      margin: 6px 0 0 16px;
-      padding: 0;
-    }
-
-    .tag-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      padding: 0;
-      list-style: none;
-      margin: 12px 0 0;
-    }
-
-    .tag-list li {
-      background-color: #1a3a5c;
+    a.nav-link {
+      display: block;
+      margin: 15px auto;
+      max-width: 300px;
+      background-color: #123a5c;
       border: 1px solid #4fc3f7;
-      border-radius: 20px;
-      padding: 4px 14px;
-      font-size: 14px;
-      color: #e0f7fa;
-    }
-
-    .back-link {
+      border-radius: 8px;
+      padding: 14px 20px;
       color: #4fc3f7;
       text-decoration: none;
-      display: inline-block;
-      margin-top: 40px;
-      font-size: 16px;
+      font-size: 20px;
+      transition: background-color 0.2s, color 0.2s;
     }
 
-    .back-link:hover {
+    a.nav-link:hover {
+      background-color: #1a4a73;
       color: #81d4fa;
     }
 
@@ -97,7 +90,6 @@
       margin-top: 60px;
       padding: 20px;
       background-color: #123a5c;
-      text-align: center;
       font-size: 14px;
       color: #aaa;
     }
@@ -107,101 +99,9 @@
 <body>
 
   <header>
-    <h1>📄 Finn Estella</h1>
-    <p>Atlanta, GA &nbsp;•&nbsp; 770-687-7663 &nbsp;•&nbsp; finnestella222@gmail.com</p>
-    <p><a href="https://www.linkedin.com/in/finnestella" style="color:#4fc3f7;">linkedin.com/in/finnestella</a></p>
-  </header>
-
-  <div class="container">
-
-    <!-- SUMMARY -->
-    <h2>Summary</h2>
-    <p>
-      Data Science major at Georgia State University with experience in data analytics, automation, and business intelligence.
-      Skilled in Python, R, SQL Server, n8n, Power BI, Power Automate, and Excel. Strong foundation in statistical analysis
-      and data visualization. Completed an internship with Alpha Advisors LLC contributing to a large-scale data governance
-      and analysis project. Seeking internships where analytical insights and automation drive measurable business impact.
-    </p>
-
-    <!-- EDUCATION -->
-    <h2>Education</h2>
-    <h3>Georgia State University — Atlanta, GA</h3>
-    <p class="meta">Bachelor of Arts and Sciences in Data Science &nbsp;•&nbsp; Expected May 2027 &nbsp;•&nbsp; GPA: 3.2</p>
-    <ul>
-      <li>HOPE Scholarship Recipient</li>
-      <li>Pi Kappa Alpha Fraternity</li>
-      <li>Georgia State University Wrestling Team</li>
-      <li>All-State High School Lacrosse Honoree</li>
-    </ul>
-
-    <!-- EXPERIENCE -->
-    <h2>Work Experience</h2>
-
-    <h3>Emerging Technology & Data Analytics Intern — Alpha Advisors LLC</h3>
-    <p class="meta">February 2025 – November 2025 &nbsp;•&nbsp; Atlanta, GA (Remote)</p>
-    <ul>
-      <li>Supported a firm-wide data transformation and automation initiative, translating business needs into technical solutions.</li>
-      <li>Implemented SQL Server solutions and assisted migration to n8n, improving automation workflows and integration efficiency.</li>
-      <li>Designed and maintained dashboards and reporting pipelines for a major global client in the broadcast software industry, enhancing performance insights and executive decision-making.</li>
-      <li>Collaborated with Power BI and Power Automate teams on solution design, documentation, testing, and QA.</li>
-      <li>Captured and documented requirements, data flows, and system interactions to align stakeholders and developers.</li>
-      <li>Explored emerging technologies in automation, AI, and low-code tools for potential adoption.</li>
-    </ul>
-
-    <h3>Lifeguard — Georgia State University Recreation Center</h3>
-    <p class="meta">December 2023 – October 2024 &nbsp;•&nbsp; Atlanta, GA</p>
-    <ul>
-      <li>Ensured patron safety by monitoring pool activity and enforcing facility rules.</li>
-      <li>Developed strong risk assessment and crisis management skills in high-stakes environments.</li>
-    </ul>
-
-    <h3>Server / Barback — Dellbar</h3>
-    <p class="meta">January 2023 – September 2023 &nbsp;•&nbsp; Atlanta, GA</p>
-    <ul>
-      <li>Delivered high-quality customer service in a fast-paced, high-volume environment.</li>
-      <li>Supported bartenders as a barback, maintaining stock and operational readiness.</li>
-    </ul>
-
-    <h3>Junior Correspondent — Omni Hotels & Resorts</h3>
-    <p class="meta">October 2022 – January 2023 &nbsp;•&nbsp; Atlanta, GA</p>
-    <ul>
-      <li>Primary on-camera personality for digital marketing campaigns across website and social media.</li>
-      <li>Partnered with marketing to design and execute content strategy and campaigns, increasing engagement.</li>
-      <li>Gained experience in public speaking, content creation, and campaign performance analysis.</li>
-    </ul>
-
-    <!-- CERTIFICATIONS -->
-    <h2>Certifications</h2>
-    <ul>
-      <li>Microsoft Power Platform Certification</li>
-      <li>Georgia State Data Skills Certification</li>
-      <li>CPR, First Aid & Lifeguarding</li>
-    </ul>
-
-    <!-- SKILLS -->
-    <h2>Skills</h2>
-    <ul class="tag-list">
-      <li>Python</li>
-      <li>R</li>
-      <li>SQL Server</li>
-      <li>n8n</li>
-      <li>Power BI</li>
-      <li>Power Automate</li>
-      <li>Excel</li>
-      <li>Savant Labs</li>
-      <li>Microsoft Office Suite</li>
-      <li>Business Intelligence</li>
-      <li>Data Visualization</li>
-      <li>Public Speaking</li>
-    </ul>
-
-    <a class="back-link" href="index.html">⬅ Back Home</a>
-
-  </div>
-
-  <footer>
-    <p>Made by Finn</p>
-  </footer>
-
-</body>
-</html>
+    <h1>🌊 Finn's Website</h1>
+    <p class="tagline">Welcome to my corner of the internet</p>
+    <p class="linkedin"><a href="https://www.linkedin.com/in/finnestella" target="_blank">www.linkedin.com/in/finnestella</a></p>
+    <div class="wave-container">
+      <svg viewBox="0 0 1200 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" height="80">
+        <path d="M0,40 C150,80 350,0
