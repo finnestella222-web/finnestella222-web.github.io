@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Finn's Picks</title>
+  <title>Finn's Shit</title>
 
   <style>
     body {
@@ -75,7 +75,7 @@
     .card p {
       color: #cfd8dc;
       line-height: 1.6;
-      margin: 0;
+      margin: 0 0 12px;
     }
 
     .card .label {
@@ -89,12 +89,21 @@
       margin-bottom: 8px;
     }
 
-    .card a {
+    .card a.btn {
+      display: inline-block;
+      margin-top: 8px;
+      background-color: #1a3a5c;
+      border: 1px solid #4fc3f7;
+      border-radius: 8px;
+      padding: 8px 18px;
       color: #4fc3f7;
       text-decoration: none;
+      font-size: 15px;
+      transition: background-color 0.2s;
     }
 
-    .card a:hover {
+    .card a.btn:hover {
+      background-color: #1a4a73;
       color: #81d4fa;
     }
 
@@ -116,41 +125,55 @@
     <a href="resume.html">📄 Resume</a>
     <a href="projects.html">💻 Projects</a>
     <a href="flows.html">🌊 Flows</a>
-    <a href="recs.html">⭐ Recs</a>
+    <a href="recs.html">¯_(ツ)_/¯ Recs</a>
   </nav>
 
   <header>
-    <h1>⭐ Finn's Picks</h1>
-    <p>Things I actually use, read, and recommend</p>
+    <h1>¯_(ツ)_/¯ Finn's Shit</h1>
+    <p>Everything I'm into</p>
   </header>
 
   <div class="container">
+
+    <h2>🥍 Sports</h2>
+
+    <div class="card">
+      <span class="label">Instagram</span>
+      <h3>Lax Clips</h3>
+      <p>Catch my lacrosse highlights and sports content over on the 'gram.</p>
+      <a class="btn" href="https://www.instagram.com/sideline.finn" target="_blank">@sideline.finn</a>
+    </div>
+
+    <h2>👕 Clothes</h2>
+
+    <div class="card">
+      <span class="label">Depop</span>
+      <h3>Buy Cool (My) Clothes</h3>
+      <p>Check out my Depop for fits worth copping.</p>
+      <a class="btn" href="https://www.depop.com/finnestella/" target="_blank">Shop Now</a>
+    </div>
 
     <h2>🛠️ Tools & Apps</h2>
 
     <div class="card">
       <span class="label">Automation</span>
       <h3>n8n</h3>
-      <p>The automation tool I use for everything. Open source, self-hostable, and way more flexible than Zapier. If you're into data or building workflows, start here. <a href="https://n8n.io" target="_blank">n8n.io</a></p>
-    </div>
-
-    <div class="card">
-      <span class="label">BI / Reporting</span>
-      <h3>Power BI</h3>
-      <p>Best free tool for building dashboards and making data actually readable for non-technical people. Pairs well with SQL Server.</p>
+      <p>The automation tool I use for everything. Open source, self-hostable, and way more flexible than Zapier.</p>
+      <a class="btn" href="https://n8n.io" target="_blank">n8n.io</a>
     </div>
 
     <div class="card">
       <span class="label">AI</span>
       <h3>Claude</h3>
-      <p>My go-to for coding help, writing, and thinking through problems. Built this site with it. <a href="https://claude.ai" target="_blank">claude.ai</a></p>
+      <p>My go-to for coding help, writing, and thinking through problems. Built this site with it.</p>
+      <a class="btn" href="https://claude.ai" target="_blank">claude.ai</a>
     </div>
 
     <h2>📖 Currently Reading</h2>
 
     <div class="card">
       <span class="label">Book</span>
-      <h3>Add your current read here</h3>
+      <h3>Coming soon</h3>
       <p>Drop in whatever you're reading and a quick thought on it.</p>
     </div>
 
