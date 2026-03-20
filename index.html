@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Finn's Website</title>
+  <title>Finn Estella</title>
 
   <style>
     * {
@@ -12,14 +12,14 @@
 
     body {
       font-family: Arial, sans-serif;
-      background-color: #0b1c2c;
+      background-color: #0a0a0a;
       color: white;
-      text-align: center;
       position: relative;
       min-height: 100vh;
       overflow-x: hidden;
     }
 
+    /* ASCII BG */
     #ascii-bg {
       position: fixed;
       top: 0;
@@ -32,12 +32,12 @@
     }
 
     #ascii-bg pre {
-      color: rgba(79, 195, 247, 0.08);
+      color: rgba(255, 255, 255, 0.04);
       font-family: monospace;
       white-space: pre;
       user-select: none;
       line-height: 1.15;
-      font-size: 0.2vw;
+      font-size: 0.5vw;
       letter-spacing: 0.05em;
       position: absolute;
       top: 0;
@@ -45,101 +45,129 @@
       width: 100%;
     }
 
-    nav, header, .container, footer {
+    /* FADE IN WRAPPER */
+    #page {
+      opacity: 0;
+      animation: fadeIn 1.2s ease forwards;
+      animation-delay: 0.2s;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* NAV */
+    nav {
+      position: relative;
+      z-index: 10;
+      padding: 28px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav .nav-name {
+      font-size: 13px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #888;
+    }
+
+    nav .nav-links {
+      display: flex;
+      gap: 24px;
+    }
+
+    nav .nav-links a {
+      color: #666;
+      text-decoration: none;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    nav .nav-links a:hover {
+      color: white;
+    }
+
+    /* HERO */
+    #hero {
       position: relative;
       z-index: 1;
+      padding: 12vh 40px 0;
     }
 
-    nav {
-      background-color: rgba(13, 42, 66, 0.92);
-      padding: 12px;
-      text-align: center;
+    #hero h1 {
+      font-size: clamp(32px, 5vw, 64px);
+      font-weight: 700;
+      line-height: 1.25;
+      color: white;
+      max-width: 800px;
     }
 
-    nav a {
-      color: #4fc3f7;
+    #hero h1 span.dim {
+      color: #555;
+    }
+
+    #hero p.linkedin {
+      margin-top: 32px;
+      font-size: 13px;
+      color: #555;
+      letter-spacing: 0.05em;
+    }
+
+    #hero p.linkedin a {
+      color: #666;
       text-decoration: none;
-      margin: 0 20px;
-      font-size: 16px;
+      transition: color 0.2s;
     }
 
-    nav a:hover {
-      color: #81d4fa;
+    #hero p.linkedin a:hover {
+      color: white;
     }
 
-    header {
-      background-color: rgba(18, 58, 92, 0.88);
-      padding: 40px 30px 0;
-    }
-
-    header h1 {
-      font-size: 40px;
-      margin-bottom: 8px;
-    }
-
-    header p.tagline {
-      color: #cfd8dc;
-      margin-bottom: 4px;
-    }
-
-    header p.linkedin {
-      font-size: 14px;
-      margin-bottom: 20px;
-    }
-
-    header p.linkedin a {
-      color: #4fc3f7;
-      text-decoration: none;
-    }
-
-    header p.linkedin a:hover {
-      color: #81d4fa;
-    }
-
-    .wave-container {
-      line-height: 0;
-    }
-
-    .wave-container svg {
-      display: block;
-      width: 100%;
-    }
-
+    /* LINKS SECTION */
     .container {
-      padding: 50px 40px;
+      position: relative;
+      z-index: 1;
+      padding: 80px 40px 60px;
     }
 
-    h2 {
-      margin-bottom: 20px;
-      font-size: 22px;
-      color: #cfd8dc;
+    .links-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
     }
 
     a.nav-link {
-      display: block;
-      margin: 15px auto;
-      max-width: 300px;
-      background-color: rgba(18, 58, 92, 0.9);
-      border: 1px solid #4fc3f7;
-      border-radius: 8px;
-      padding: 14px 20px;
-      color: #4fc3f7;
+      display: inline-block;
+      padding: 10px 22px;
+      border: 1px solid #2a2a2a;
+      border-radius: 4px;
+      color: #777;
       text-decoration: none;
-      font-size: 20px;
-      transition: background-color 0.2s, color 0.2s;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: border-color 0.2s, color 0.2s;
+      background-color: transparent;
     }
 
     a.nav-link:hover {
-      background-color: #1a4a73;
-      color: #81d4fa;
+      border-color: #666;
+      color: white;
     }
 
+    /* FOOTER */
     footer {
-      margin-top: 60px;
-      padding: 20px;
-      background-color: rgba(18, 58, 92, 0.92);
-      font-size: 14px;
-      color: #aaa;
+      position: relative;
+      z-index: 1;
+      padding: 20px 40px;
+      font-size: 12px;
+      color: #333;
+      letter-spacing: 0.08em;
     }
   </style>
 </head>
@@ -223,36 +251,48 @@
 #=.::.:...:...::..:.....:....:..::....:-+#*++=.-**=*#=:=***#*+++*+-.. .::-*****#%%%%#*+++=-:::::::::----=++*##%%%############%%%%%######%%################################
 =..-::...::....:. .:. ...:.......:..... .-=.--::=+**%##%****####*#*=:.   .--:-+#**##*#%%%###%###*############################################################**###########</pre></div>
 
-  <nav>
-    <a href="index.html">🏠 Home</a>
-    <a href="resume.html">📄 Resume</a>
-    <a href="projects.html">💻 Projects</a>
-    <a href="flows.html">🌊 Flows</a>
-    <a href="recs.html">¯_(ツ)_/¯ Recs</a>
-  </nav>
+  <div id="page">
 
-  <header>
-    <h1>🌊 Finn's Website</h1>
-    <p class="tagline">Trying some things out</p>
-    <p class="linkedin"><a href="https://www.linkedin.com/in/finnestella" target="_blank">www.linkedin.com/in/finnestella</a></p>
-    <div class="wave-container">
-      <svg viewBox="0 0 1200 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" height="80">
-        <path d="M0,40 C150,80 350,0 600,40 C850,80 1050,0 1200,40 L1200,80 L0,80 Z" fill="#0b1c2c"/>
-      </svg>
+    <nav>
+      <span class="nav-name">Finn Estella</span>
+      <div class="nav-links">
+        <a href="resume.html">Resume</a>
+        <a href="projects.html">Projects</a>
+        <a href="flows.html">Flows</a>
+        <a href="recs.html">Recs</a>
+      </div>
+    </nav>
+
+    <section id="hero">
+      <h1>
+        i'm finn 🌊<br>
+        <span class="dim">data science student building</span><br>
+        <span class="dim">automations & things that work</span>
+      </h1>
+      <p class="linkedin">
+        <a href="https://www.linkedin.com/in/finnestella" target="_blank">linkedin.com/in/finnestella</a>
+        &nbsp;·&nbsp;
+        <a href="https://www.instagram.com/finnestella22" target="_blank">@finnestella22</a>
+      </p>
+    </section>
+
+    <div class="container">
+      <div class="links-row">
+        <a class="nav-link" href="resume.html">📄 Resume</a>
+        <a class="nav-link" href="projects.html">💻 Projects</a>
+        <a class="nav-link" href="flows.html">🌊 Flows</a>
+        <a class="nav-link" href="recs.html">¯_(ツ)_/¯ Recs</a>
+      </div>
     </div>
-  </header>
 
-  <div class="container">
-    <h2>Links</h2>
-    <a class="nav-link" href="resume.html">📄 Resume</a>
-    <a class="nav-link" href="projects.html">💻 Projects</a>
-    <a class="nav-link" href="flows.html">🌊 Flows</a>
-    <a class="nav-link" href="recs.html">¯_(ツ)_/¯ Recs</a>
+    <footer>
+      Made by Finn
+    </footer>
+
   </div>
 
-  <footer>
-    <p>Made by Finn</p>
-  </footer>
+</body>
+</html>
 
 </body>
 </html>
